@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { APIScreen } from './Views/API'
 import { ListScreen } from './Views/List'
 import { CreationScreen } from './Views/Creation'
+import { MediaScreen } from './Views/Media'
 
 const CreationIcon = require('./assets/creation_icon.png');
 const ListIcon = require('./assets/list_icon.png');
@@ -33,9 +34,12 @@ const App = () => {
         <Tab.Screen name="Создать" component={CreationScreen} />
         <Tab.Screen name="Список" component={ListScreen} />
         <Tab.Screen name="API" component={APIScreen} />
+        <Tab.Screen name="MEDIA" component={MediaScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
 };
+
+
 
 export default App;
