@@ -12,7 +12,7 @@ export const MediaScreen = () => {
                 console.log('User cancelled image picker');
             } else if (response.errorCode) {
                 console.log('ImagePicker Error: ', response.errorCode);
-            } else if (response.assets && response.assets.length > 0) {
+            } else if (response.assets && response.assets.length) {
                 setMedia(response.assets[0]);
             }
         });
@@ -20,7 +20,7 @@ export const MediaScreen = () => {
 
     return (
         <View style={styles.container}>
-            <Button title="Select Media" onPress={selectMedia} />
+            <Button title="Выберите медиа" onPress={selectMedia} />
             {media && (
                 media.type?.startsWith('image/') ? (
                     <Image source={{ uri: media.uri }} style={styles.media} />

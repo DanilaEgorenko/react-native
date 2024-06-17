@@ -10,6 +10,7 @@ import { MediaScreen } from './Views/Media'
 const CreationIcon = require('./assets/creation_icon.png');
 const ListIcon = require('./assets/list_icon.png');
 const APIIcon = require('./assets/api_icon.png');
+const MediaIcon = require('./assets/media_icon.png');
 
 const Tab = createBottomTabNavigator();
 
@@ -26,6 +27,8 @@ const App = () => {
               iconSource = ListIcon
             } else if (route.name === 'API') {
               iconSource = APIIcon
+            } else if (route.name === 'MEDIA') {
+              iconSource = MediaIcon
             }
             return <Image source={iconSource} style={{ width: 32, height: 32 }} />;
           },
