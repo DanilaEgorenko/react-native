@@ -3,6 +3,7 @@
 .DS_Store
 
 .nvmrc
+.eslintignore
 
 # Xcode
 #

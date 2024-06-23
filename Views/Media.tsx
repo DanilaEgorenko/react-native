@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Button, Image, StyleSheet } from 'react-native';
 import Video from 'react-native-video';
 import { launchImageLibrary, Asset } from 'react-native-image-picker';
+import { styles } from './Styles';
 
 export const MediaScreen = () => {
     const [media, setMedia] = useState<Asset | null>(null);
@@ -19,7 +20,7 @@ export const MediaScreen = () => {
     };
 
     return (
-        <View style={styles.container}>
+        <View style={styles.container} >
             <Button title="Выберите медиа" onPress={selectMedia} />
             {media && (
                 media.type?.startsWith('image/') ? (
@@ -31,15 +32,3 @@ export const MediaScreen = () => {
         </View>
     );
 };
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    media: {
-        width: 250,
-        height: 250,
-    },
-});

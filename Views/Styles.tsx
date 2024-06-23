@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, Platform } from 'react-native';
 
 const screenWidth = Dimensions.get('window').width;
 
@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
         minHeight: 56
     },
     button: {
-        backgroundColor: '#5a5fcf',
+        backgroundColor: Platform.OS === 'android' ? '#000' : '#5a5fcf',
         paddingVertical: 10,
         paddingHorizontal: 20,
         borderRadius: 5,
