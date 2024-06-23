@@ -1,4 +1,41 @@
 {
-  "name": "lexip",
-  "displayName": "LEXIP"
+  "name": "SuperApp",
+  "displayName": "SuperApp",
+  "icon": "./assets/icon.png",
+  "screenshots": [],
+  "description": "Супер приложение для просмотра списка дел, просмотра мультимедиа (фото и видео контента) и просмотра списка постов по API",
+  "keywords": [
+    "мультимедиа",
+    "фото",
+    "видео",
+    "просмотр постов",
+    "просмотр фото",
+    "просмотр видео",
+    "список"
+  ],
+  "expo": {
+    "name": "SuperApp",
+    "slug": "superapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    }
+  }
 }
